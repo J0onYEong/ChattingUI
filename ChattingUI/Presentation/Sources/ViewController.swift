@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         textView.backgroundColor = .white
         textView.isScrollEnabled = false
         textView.font = UIFont.systemFont(ofSize: 20)
-        textView.contentInset = .init(top: 2, left: 5, bottom: 5, right: 2)
+        textView.textContainerInset = .init(top: 3, left: 5, bottom: 3, right: 5)
         textView.textContainer.lineFragmentPadding = 0
         
         return textView
