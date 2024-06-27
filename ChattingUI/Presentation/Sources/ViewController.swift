@@ -41,7 +41,17 @@ class ViewController: UIViewController {
         textView.backgroundColor = .white
         textView.isScrollEnabled = false
         textView.font = UIFont.systemFont(ofSize: 20)
-        textView.textContainerInset = .init(top: 3, left: 5, bottom: 3, right: 5)
+        textView.clipsToBounds = true
+        textView.layer.cornerRadius = 2.5
+        
+        // contentInset은 내부컨텐츠 전체를 의미한다.
+        textView.contentInset = .init(top: 5, left: 5, bottom: 5, right: 5)
+        
+        // textContainerInset은 텍스트 필드 내부의 텍스트 상자의 인셋을 의미한다.
+        // top, bottom값이 0이면 입력창이 너무좁아진다.
+        textView.textContainerInset = .init(top: 5, left: 0, bottom: 5, right: 5)
+        
+        // textContainer.lineFragmentPadding은 텍스트 상자의 왼쪽 여백을 의미한다.
         textView.textContainer.lineFragmentPadding = 0
         
         return textView
