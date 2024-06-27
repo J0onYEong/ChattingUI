@@ -123,6 +123,10 @@ class ViewController: UIViewController {
         
         plusItem.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         sendItem.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        
+        plusItem.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        sendItem.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        chattingField.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
             
         // chattingFieldBox
         [
